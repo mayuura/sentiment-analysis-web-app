@@ -19,7 +19,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer style={{ backgroundColor: '#282c34', color: 'white', padding: '10px 20px', textAlign: 'center', width: '100%', position: 'fixed', bottom: 0 }}>
-      <p>© 2024 Sentiment Analysis App</p>
+      <p>© Maayura</p>
     </footer>
   );
 };
