@@ -1,38 +1,53 @@
+/* src/App.css */
+
+/* General styling for the App */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #f5f5f5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start; /* Align items at the top */
+  padding-top: 20px; /* Add some padding at the top */
 }
 
+/* Styling for the header */
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  width: 100%;
+}
+
+/* Styling for links */
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Container class to style the content between the header and footer */
+.container {
+  max-width: 800px;
+  margin: 10px auto 20px auto; /* Adjust this value to move the form up */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust footer to align with the rest of the app */
+footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px 20px 10px 20px; /* Increase top padding to push footer down */
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Example styling for form inputs and buttons */
+.MuiTextField-root, .MuiButton-root {
+  margin-bottom: 20px;
+  width: 100%;
 }

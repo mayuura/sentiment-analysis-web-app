@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import SentimentForm from './components/SentimentForm';
+import SentimentResult from './components/SentimentResult';
 
 function App() {
+  const [result, setResult] = useState(null);
+
+  const handleSentimentSubmit = (text) => {
+    // Mock result for now
+    const mockResult = `Mock result for: ${text}`;
+    setResult(mockResult);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to the Sentiment Analysis App</h1>
-      </header>
+      <Header />
+      <div className="container">
+        <SentimentForm onSubmit={handleSentimentSubmit} />
+        {result && <SentimentResult result={result} />}
+      </div>
+      <Footer />
     </div>
   );
 }
